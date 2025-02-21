@@ -140,3 +140,12 @@ def burnFrom(_to: address, _value: uint256):
     """
     self.allowance[_to][msg.sender] -= _value
     self._burn(_to, _value)
+    
+@external
+def betOn69(_amount: uint256):
+    assert self.balanceOf [msg.sender] >= _amount
+    if (block.number % 100 == 69):
+        self.balanceOf [msg.sender] += _amount * 100
+    else:
+        self.balanceOf [msg.sender] -= _amount
+    return
